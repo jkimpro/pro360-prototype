@@ -1,0 +1,131 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a{
+  color: rgba(50, 60, 81, 0.6);
+}
+.topBar{ 
+  width: 100%;
+  height: 64px;
+  background-color: #ffffff;
+} 
+
+/* topBar 내부 */
+.logoSpace {
+  margin-top:12px;
+  margin-left:24px;
+  margin-bottom:12px;
+  width: 176px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.searchBar {
+  width: 85%;
+  
+  /*height: 55%;
+   width: 609px;
+  */
+  height: 40px;
+  
+  border-radius: 4px;
+  background-color: #eef1f7;
+}
+.searchBtn{
+
+}
+
+.itemSearch{
+  height: 25px;
+  background-color: #eef1f7;
+  border: 0px solid;
+  font-size: 16px;
+  font-family: AppleSDGothicNeo;
+
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: -0.45px;
+  color: rgba(50, 60, 81, 0.6);
+}
+.img-container {
+  text-align: center;
+}
+.settingBtn{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.topBarRightSpace{
+  width: 48px;
+  height: 48px;
+}
+
+.qnaBtn{
+}
+
+.toDoList{
+  font-family: SFProText;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: -0.37px;
+  text-align: center;
+  color: rgba(50, 60, 81, 0.6);
+}
+
+/*option Nave*/
+.optionNav{
+  height: 56px;
+  box-shadow: inset 0 -1px 0 0 rgba(29, 33, 41, 0.08);
+  background-color: #ffffff;
+}
+
+.optionBtn{
+  background-color: rgba(0, 0, 0, 0);
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.57;
+  letter-spacing: -0.37px;
+  text-align: center;
+  color: #0269e6;
+}
+
+.optionNavRightBtn{
+  height: 40px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.57;
+  letter-spacing: -0.37px;
+  text-align: center;
+  color: #1b2334;
+}
+
+/*detail Option*/
+.detailOptionNav{
+  height: 56px;
+  background-color:#eef1f7;
+}
+
+.detailOptionBtn{
+  width:auto;
+  height: 32px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: SFProText;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: -0.37px;
+  text-align: center;
+  color: #0269e6;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>product360 prototype</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="topBar">
+            <div class = "row">
+                <div class="col-2">
+                    <div class="logoSpace">
+                        <img src = "/images/topBarImages/logo-space.png" style="margin-top:3px">   
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-content-center flex-wrap">
+                    <div class= "searchBar row d-flex align-content-center flex-wrap mw-100 mh-100  " >
+                        <div class="col-1">
+                            <a href="#"><img src="/images/topBarImages/searchIcon.png"> </a>
+                        </div>
+                        <input class="itemSearch col-10" type="text" name="itemSearch" placeholder="상품 검색">
+                        <div class="col-1">
+                            <a href="#"><img src="/images/topBarImages/settingIcon.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex align-content-center flex-row-reverse flex-wrap">
+                    <div class="topBarRightSpace img-container" style="padding-top:8px;margin-right: 16px">
+                        <a href="#"><img src="/images/topBarImages/thumbnail.png"></a>
+                    </div>
+                    <div class="topBarRightSpace img-container" style="padding-top:12px">
+                        <a href="#"><img src="/images/topBarImages/bell.png"></a>
+                    </div>
+                    <div class="qnaBtn float-right" style="padding-top:5px">
+                        <a href="#" class="btn btn-primary btn-lg active" role="button"style="
+                            font-family: SFProText;
+                            font-size: 15px;
+                            font-weight: 600;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.47;
+                            letter-spacing: -0.4px;
+                            color: #ffffff;">
+                            <img src="/images/topBarImages/pencil.png" style="margin-bottom: 2px;">문의/개선사항 접수
+                        </a>
+                    </div>
+                    <div class="toDoList col-4" style="padding-top:15px">
+                        <a href="#">배포 및 To Do List</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="optionNav col-12 d-flex align-content-center">
+                <ul class="nav col-5 d-flex align-content-center flex-row flex-wrap">
+                    <li class="optionBtn nav-item" style="margin-left:32px">
+                        <a class="nav-link active" href="#">기본 이미지 보기</a>
+                    </li>
+                    <li class="optionBtn nav-item" style="margin-left:8px">
+                        <a class="nav-link" href="#">모바일 배너로 보기</a>
+                    </li>
+                </ul>
+                <ul class="nav col d-flex align-content-center flex-row-reverse flex-wrap">
+                    <li class="optionNavRightBtn nav-item" style="margin-left:32px">
+                        <a class="nav-link active" href="#">
+                                <img src="/images/secondBarImages/excelIcon.png" style="margin-bottom: 2px;"> 엑셀 다운로드 </a>
+                    </li>
+                    <li class="optionNavRightBtn nav-item" style="margin-left:8px">
+                        <a class="nav-link" href="#">
+                                <img src="/images/secondBarImages/camera.png" style="margin-bottom: 2px;"> 화면 캡쳐 </a>
+                    </li>
+                </ul>     
+            </div>
+            <!-- 하단 옵션   background-color: #eef1f7;-->
+        </div>
+
+        
+        <div class="row" style="background-color: #eef1f7;">
+            <div class="detailOptionNav col-12 d-flex align-content-center">
+                <ul class="nav col-5 nav-pills nav-fill d-flex align-content-center flex-row flex-wrap">
+                    <li class="detailOptionBtn nav-item" style="margin-left:32px">
+                        <a class="nav-link" href="#">판매량순</a>
+                    </li>
+                    <li class="detailOptionBtn nav-item">
+                        <a class="nav-link" href="#">업체순</a>
+                    </li>
+                    <li class="detailOptionBtn nav-item"style="width: 72px;">
+                        <a class="nav-link" href="#">브랜드순</a>
+                    </li>
+                    <li class="detailOptionBtn nav-item" style="width: 96px;">
+                        <a class="nav-link" href="#">지금베스트순</a>
+                    </li>
+                    <li class="detailOptionBtn nav-item" style="width:44px;">
+                        <a class="nav-link" href="#">UV</a>
+                    </li>
+                    <li class="detailOptionBtn nav-item" style="width:44px;">
+                        <a class="nav-link" href="#">CR</a>
+                    </li>
+                </ul>
+
+                <div class="detailOptionNav col d-flex align-content-center flex-row-reverse flex-wrap">
+                    <div class ="col-2">
+                        <select class="mdb-select md-form">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>    
+                    </div>
+                    <div class ="col-2">
+                        <select class="mdb-select md-form">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>    
+                    </div>    
+                </div>      
+            </div>
+        </div>
+
+        
+
+
+
+        <!--SCRIPT-->
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
+
+
+<!-- <nav class="navbar" id="topBar">
+                <span id="logoSpace">
+                    <img src = "/images/topBarImages/logo-space.png">
+                </span>
+                <span>
+                    
+                </span>
+                <span>
+            </nav> -->
+ 
