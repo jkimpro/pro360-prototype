@@ -1,0 +1,161 @@
+
+.cardDeck{
+    height: 490px;
+}
+
+.cardBackground {
+    width: 326px;
+    height: 490px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+    background-color: #ffffff;
+    flex: none;
+    margin-left: 24px;
+}
+
+.cardImage{
+    width: 80px;
+    height: 80px;
+}
+
+.cardProductCode{
+    width: 190px;
+    height: 14px;
+    font-family: SFProText;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: rgba(50, 60, 81, 0.6);
+}
+.cardCompanyName{
+    width: 190px;
+    height: 18px;
+    font-family: AppleSDGothicNeo;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.32px;
+    color: #03919d;
+}
+.cardProductName{
+    width: 190px;
+    height: 24px;
+    font-family: AppleSDGothicNeo;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.43px;
+    color: #1b2334;
+}
+.cardProductSubName{
+    width: 190px;
+    height: 20px;
+    font-family: SFProText;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: -0.35px;
+    color: rgba(50, 60, 81, 0.6);
+}
+
+.topDivider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(27, 35, 52, 0.08);
+}
+
+
+.cardPriceMessage{
+    width: 176.7px;
+    height: 26px;
+    font-family: AppleSDGothicNeo;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: -0.43px;
+    color: #1b2334;
+}
+
+.cardPrice{
+    width: 143.1px;
+    height: 26px;
+    font-family: SFProText;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: -0.38px;
+    text-align: right;
+    color: #1b2334;
+}
+
+.subMessage{
+    width: 123.4px;
+    height: 20px;
+    font-family: AppleSDGothicNeo;
+    font-size: 13px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: -0.35px;
+    color: rgba(50, 60, 81, 0.6);
+}
+.subPriceAndRate{
+    width: 123.4px;
+    height: 20px;
+    font-family: SFProText;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -0.37px;
+    color: #1b2334;
+}
+
+.warning{
+    width: 13.7px;
+  height: 13.7px;
+  background-color: #ea1919;
+}
+.warningMessage{
+    width: 67px;
+    height: 16px;
+    font-family: AppleSDGothicNeo;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: -0.32px;
+    color: #1b2334;
+}
+
+.contactLabel{
+    width: 41px;
+  height: 16px;
+  font-family: SFProText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -0.32px;
+  text-align: center;
+  color: #0269e6;
+
+}
+
+

@@ -4,10 +4,14 @@
         <title>product360 prototype</title>
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/selectCustom.css">
+        <link rel="stylesheet" href="/stylesheets/cardCustom.css">
+        <link rel="stylesheet" href="/stylesheets/originalBootCustom.css">
+
     </head>
     <body>
-        <div class="topBar">
-            <div class = "row">
+        <div class="container-fluid"> 
+            <div class = "row topBar">
                 <div class="col-2">
                     <div class="logoSpace">
                         <img src = "/images/topBarImages/logo-space.png" style="margin-top:3px">   
@@ -25,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col d-flex align-content-center flex-row-reverse flex-wrap">
-                    <div class="topBarRightSpace img-container" style="padding-top:8px;margin-right: 16px">
+                    <div class="topBarRightSpace img-container" style="padding-top:8px;">
                         <a href="#"><img src="/images/topBarImages/thumbnail.png"></a>
                     </div>
                     <div class="topBarRightSpace img-container" style="padding-top:12px">
@@ -47,89 +51,124 @@
                     <div class="toDoList col-4" style="padding-top:15px">
                         <a href="#">배포 및 To Do List</a>
                     </div>
-                </div> 
+                </div>
+            </div> 
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="optionNav col-12 d-flex align-content-center">
+                    <ul class="nav col-5 d-flex align-content-center flex-row flex-wrap">
+                        <li class="optionBtn nav-item" style="margin-left:10px">
+                            <a class="nav-link active" href="#">기본 이미지 보기</a>
+                        </li>
+                        <li class="optionBtn nav-item" style="margin-left:8px">
+                            <a class="nav-link" href="#">모바일 배너로 보기</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav col d-flex align-content-center flex-row-reverse flex-wrap">
+                        <li class="optionNavRightBtn nav-item" style="margin-left:10px">
+                            <a class="nav-link active" href="#">
+                                    <img src="/images/secondBarImages/excelIcon.png" style="margin-bottom: 2px;"> 엑셀 다운로드 </a>
+                        </li>
+                        <li class="optionNavRightBtn nav-item" style="margin-left:8px">
+                            <a class="nav-link" href="#">
+                                    <img src="/images/secondBarImages/camera.png" style="margin-bottom: 2px;"> 화면 캡쳐 </a>
+                        </li>
+                    </ul>     
+                </div>
+                <!-- 하단 옵션   background-color: #eef1f7;-->
             </div>
         </div>
 
-
-        <div class="row">
-            <div class="optionNav col-12 d-flex align-content-center">
-                <ul class="nav col-5 d-flex align-content-center flex-row flex-wrap">
-                    <li class="optionBtn nav-item" style="margin-left:32px">
-                        <a class="nav-link active" href="#">기본 이미지 보기</a>
-                    </li>
-                    <li class="optionBtn nav-item" style="margin-left:8px">
-                        <a class="nav-link" href="#">모바일 배너로 보기</a>
-                    </li>
-                </ul>
-                <ul class="nav col d-flex align-content-center flex-row-reverse flex-wrap">
-                    <li class="optionNavRightBtn nav-item" style="margin-left:32px">
-                        <a class="nav-link active" href="#">
-                                <img src="/images/secondBarImages/excelIcon.png" style="margin-bottom: 2px;"> 엑셀 다운로드 </a>
-                    </li>
-                    <li class="optionNavRightBtn nav-item" style="margin-left:8px">
-                        <a class="nav-link" href="#">
-                                <img src="/images/secondBarImages/camera.png" style="margin-bottom: 2px;"> 화면 캡쳐 </a>
-                    </li>
-                </ul>     
+        <div class="container-fluid">
+            <div class="row" style="padding-bottom:10px;">
+                <div class="detailOptionNav col-12 d-flex align-content-center">
+                    <ul class="nav col-5 nav-pills nav-fill d-flex align-content-center flex flex-wrap">
+                        <a class="detailOptionBtn nav-link" href="#">판매량순</a>
+                        <a class="detailOptionBtn text-sm-center nav-link" href="#">업체순</a>
+                        <a class="detailOptionBtn nav-link" href="#" style="width:;">브랜드순</a>
+                        <a class="detailOptionBtn nav-link" href="#" style="width:;">지금베스트순</a>
+                        <a class="detailOptionBtn nav-link" href="#" style="width:;">UV</a>
+                        <a class="detailOptionBtn nav-link" href="#" style="width:;">CR</a>
+                    </ul>
+    
+                    <div class="detailOptionNav col d-flex align-content-center flex-row-reverse flex-wrap">
+                        <div class ="col-2">
+                            <select class="custom-select">
+                                <option value="50">50 개씩 보기</option>
+                                <option value="100">100 개씩 보기</option>
+                                <option value="200">200 개씩 보기</option>
+                                <option value="300">300 개씩 보기</option>
+                            </select>    
+                        </div>
+                        <div class ="col-2">
+                            <select class="custom-select">
+                                <option value="50">50 개씩 보기</option>
+                                <option value="100">100 개씩 보기</option>
+                                <option value="200">200 개씩 보기</option>
+                                <option value="300">300 개씩 보기</option>
+                            </select>    
+                        </div>    
+                    </div>      
+                </div>
             </div>
-            <!-- 하단 옵션   background-color: #eef1f7;-->
         </div>
-
         
-        <div class="row" style="background-color: #eef1f7;">
-            <div class="detailOptionNav col-12 d-flex align-content-center">
-                <ul class="nav col-5 nav-pills nav-fill d-flex align-content-center flex-row flex-wrap">
-                    <li class="detailOptionBtn nav-item" style="margin-left:32px">
-                        <a class="nav-link" href="#">판매량순</a>
-                    </li>
-                    <li class="detailOptionBtn nav-item">
-                        <a class="nav-link" href="#">업체순</a>
-                    </li>
-                    <li class="detailOptionBtn nav-item"style="width: 72px;">
-                        <a class="nav-link" href="#">브랜드순</a>
-                    </li>
-                    <li class="detailOptionBtn nav-item" style="width: 96px;">
-                        <a class="nav-link" href="#">지금베스트순</a>
-                    </li>
-                    <li class="detailOptionBtn nav-item" style="width:44px;">
-                        <a class="nav-link" href="#">UV</a>
-                    </li>
-                    <li class="detailOptionBtn nav-item" style="width:44px;">
-                        <a class="nav-link" href="#">CR</a>
-                    </li>
-                </ul>
+        <div class="container-fluid">
+            <div class="row">
+                <div class ="col-12 d-flex align-content-center">
+                    <div class="card-deck mr-0 ml-0 flex-grow-1 d-flex align-items-center flex-wrap">
+                            <div class="card cardBackground flex-shrink-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">
+                                            <img src="/images/secondBarImages/camera.png" class="cardImage">
+                                        </a>
+                                    </div>
 
-                <div class="detailOptionNav col d-flex align-content-center flex-row-reverse flex-wrap">
-                    <div class ="col-2">
-                        <select class="mdb-select md-form">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>    
+                                    <div class="col">
+                                        <div class="row"> <div class="col cardProductCode">dsdfd</div> </div>
+                                        <div class="row"> <div class="col cardCompanyName">dsdfd</div></div>
+                                        <div class="row"> <div class="col cardProductName">ddsfd</div></div>
+                                        <div class="row"> <div class="col cardProductSubName">dsdfd</div></div>
+                                    </div>    
+                                </div>
+                                <ul class="topDivider"></ul>
+                                <div class="row">
+                                    <div class="col-1">
+                                    
+                                    </div>
+                                    <div class="col-2">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                </div>
+                                <div class="row"></div>
+                            </div>
+                            <div class="card cardBackground flex-shrink-0">
+                                    
+                            </div>
+                            <div class="card cardBackground flex-shrink-0">
+                                    
+                            </div>
+        
+                            <div class="card cardBackground flex-shrink-0">
+                                
+                            </div>
+        <!----------------------------------DONE------------------------------------------------>
                     </div>
-                    <div class ="col-2">
-                        <select class="mdb-select md-form">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>    
-                    </div>    
-                </div>      
+                </div>
             </div>
         </div>
-
-        
-
-
 
         <!--SCRIPT-->
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
     </body>
-
 </html>
 
 

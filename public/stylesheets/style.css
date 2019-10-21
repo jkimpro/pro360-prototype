@@ -1,11 +1,11 @@
 body {
+  background-color: #eef1f7;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a{
   color: rgba(50, 60, 81, 0.6);
 }
 .topBar{ 
-  width: 100%;
   height: 64px;
   background-color: #ffffff;
 } 
@@ -115,7 +115,6 @@ a{
 }
 
 .detailOptionBtn{
-  width:auto;
   height: 32px;
   border-radius: 16px;
   background-color: rgba(0, 0, 0, 0);
