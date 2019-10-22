@@ -1,0 +1,43 @@
+.modalBackground {
+        width: 721px;
+        height: 624px;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.12);
+        background-color: #ffffff;
+  }
+
+.modalTableStyle{
+      width:600px;
+}
+.modalTableBorderStyle{
+border-color: #ffffff;
+}
+.modalTableHeader{
+      width:20%;
+      height:70px;
+}
+.modalBasicFont{
+font-family: AppleSDGothicNeo;
+font-size: 14px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.43;
+letter-spacing: -0.37px;
+color: rgba(50, 60, 81, 0.6);
+}
+.modalBoldFont{
+font-family: AppleSDGothicNeo;
+font-size: 14px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.43;
+letter-spacing: -0.37px;
+color: #1b2334;
+}
+.modalSelect{
+width: 186px;
+height: 36px;
+background-color: rgba(0, 0, 0, 0);
+
+}

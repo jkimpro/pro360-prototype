@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/stylesheets/selectCustom.css">
         <link rel="stylesheet" href="/stylesheets/cardCustom.css">
         <link rel="stylesheet" href="/stylesheets/originalBootCustom.css">
-
+        <link rel="stylesheet" href="/stylesheets/modalCustom.css">
     </head>
     <body>
         <div class="container-fluid"> 
@@ -22,10 +22,14 @@
                         <div class="col-1">
                             <a href="#"><img src="/images/topBarImages/searchIcon.png"> </a>
                         </div>
-                        <input class="itemSearch col-10" type="text" name="itemSearch" placeholder="상품 검색">
-                        <div class="col-1">
+                        <!-- <input class="itemSearch col-10" type="text" name="itemSearch" placeholder="상품 검색"> -->
+                        <button class="itemSearch col-10 d-flex align-content-center flex-row flex-wrap" name="searchItemModal"> 상품검색 </button>
+                        <!-- <div class="col-1">
                             <a href="#"><img src="/images/topBarImages/settingIcon.png"></a>
-                        </div>
+                        </div> -->
+                        <button class="col settingBtn" data-toggle="modal" data-target="#searchItemModal"> 
+                            <img class="settingBtnImg" src="/images/topBarImages/settingIcon.png">
+                        </button>
                     </div>
                 </div>
                 <div class="col d-flex align-content-center flex-row-reverse flex-wrap">
@@ -55,6 +59,123 @@
             </div> 
         </div>
 
+        <!----Modal related-->
+        <!-- data-backdrop="false" -->
+      
+        <div class="modal fade" id="searchItemModal" tabindex="-1" role="dialog" aria-labelledby="searchItemModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-body modalBackground">
+                        <div class="container-fluid">
+                            <div class="row" style="margin-top:10px">
+                                <table class="table modalTableStyle modalTableBorderStyle">
+                                    <tbody>
+                                        <tr>
+                                            <th style="border-color: #ffffff;" class="modalTableHeader">
+                                                <label for="기준" class="modalBasicFont ml-3">기준</label>
+                                            </th>
+                                            <td class="col-1"style="border-color: #ffffff;">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input id="isSalesRank" type="radio" name="order" value="isSalesRank" checked="checked" class="custom-control-input">
+                                                        <label for="isSalesRank" class="custom-control-label">실적기준 </label>
+                                                        <span id="bastCategory" class="ml-3">
+                                                            <select id="category" name="category" style="font-size: 14px;" onchange="callData()" class="mr-3">
+                                                                <option value="r01">전체</option>
+                                                                <option value="r02">TV 쇼핑</option>
+                                                                <option value="r03">백화점</option>
+                                                                <option value="r04">패션의류/속옷</option>
+                                                                <option value="r05">출산/유아동</option>
+                                                                <option value="r06">뷰티</option>
+                                                                <option value="r07">스포츠/레저</option>
+                                                                <option value="r08">가구/침구/홈데코</option>
+                                                                <option value="r09">식품</option>
+                                                                <option value="r10">가전/디지털</option>
+                                                                <option value="r11">반려동물</option>
+                                                                <option value="r12">여행/티켓</option>
+                                                                <option value="r13">잡화/슈즈/보석</option>
+                                                                <option value="r14">명품/해외직구</option>
+                                                                <option value="r15">생활/주방</option>
+                                                                <option value="r16">도서/사무용품</option>
+                                                            </select>
+                                                        </span>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input id="isNewProduct" type="radio" name="order" value="isNewProduct" class="custom-control-input">
+                                                        <label for="isNewProduct" class="custom-control-label">
+                                                            등록기준
+                                                        </label>
+                                                    </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-color: #ffffff;" class="modalTableHeader">
+                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">기간</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-color: #ffffff;"  class="modalTableHeader">
+                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">MDID/MD명</label>
+                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-color: #ffffff;"  class="modalTableHeader">
+                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">업체코드/업체명</label>
+                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-color: #ffffff;"  class="modalTableHeader">
+                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">브랜드코드/브랜드명</label>
+                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-color: #ffffff;"  class="modalTableHeader">
+                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">상품코드</label>
+                                    
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- <div class="modal fade" id="searchItemModal" tabindex="-1" role="dialog" aria-labelledby="searchItemModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-body modalBackground">
+                        <div class="container-fluid">
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-3 modalBasicFont">기준</div>
+                                <div class="col-2 modalBoldFont">
+                                    실적기준
+                                </div>
+                            </div>
+                            <div class="row">
+
+                            </div>
+                            <div class="row">
+
+                            </div> 
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        
+
         <div class="container-fluid">
             <div class="row">
                 <div class="optionNav col-12 d-flex align-content-center">
@@ -83,17 +204,19 @@
         </div>
 
         <div class="container-fluid">
+                <!--해당자료 참고하고 수정하기 https://getbootstrap.com/docs/4.1/components/badge/ -->
             <div class="row" style="padding-bottom:10px;">
                 <div class="detailOptionNav col-12 d-flex align-content-center">
                     <ul class="nav col-5 nav-pills nav-fill d-flex align-content-center flex flex-wrap">
                         <a class="detailOptionBtn nav-link" href="#">판매량순</a>
                         <a class="detailOptionBtn text-sm-center nav-link" href="#">업체순</a>
-                        <a class="detailOptionBtn nav-link" href="#" style="width:;">브랜드순</a>
-                        <a class="detailOptionBtn nav-link" href="#" style="width:;">지금베스트순</a>
-                        <a class="detailOptionBtn nav-link" href="#" style="width:;">UV</a>
-                        <a class="detailOptionBtn nav-link" href="#" style="width:;">CR</a>
+                        <a class="detailOptionBtn nav-link" href="#" >브랜드순</a>
+                        <a class="detailOptionBtn nav-link" href="#" >지금베스트순</a>
+                        <a class="detailOptionBtn nav-link" href="#" >UV</a>
+                        <a class="detailOptionBtn nav-link" href="#" >CR</a>
                     </ul>
     
+                    <!--해당자료 참고하고 수정하기 https://getbootstrap.com/docs/4.1/components/dropdowns/ -->
                     <div class="detailOptionNav col d-flex align-content-center flex-row-reverse flex-wrap">
                         <div class ="col-2">
                             <select class="custom-select">
@@ -119,98 +242,98 @@
         <div class="container-fluid">
             <div class="row">
                 <div class ="col-12 d-flex align-content-center">
+                     <!--카드 대크---------------------------------------->
                     <div class="card-deck mr-0 ml-0 flex-grow-0 d-flex align-items-center flex-wrap">
-                            <div class="card cardBackground flex-shrink-0 container-fluid">
-            
-                                            <div class="row" style="padding-top:5px">
-                                                <a class="col-4 d-flex align-self-center" href="#" style = "height: 96px; align-items: center;">
-                                                    <img src="/images/secondBarImages/camera.png" class="cardImage">
-                                                </a>
-                                                <div class="col">
-                                                    <div class="row" style="margin-top: 10px"> <div class="col cardProductCode"> 상품코드 : 99999999</div> </div>
-                                                    <div class="row"> <div class="col cardCompanyName"> 올리비아비 / 주식회사 세정글로벌</div></div>
-                                                    <div class="row"> <div class="col cardProductName"> [몬테밀라노] 몬테밀라노 </div></div>
-                                                    <div class="row"> <div class="col cardProductSubName"> [OLIVIA.B] 레인 드롭 후드...</div></div>
-                                                </div>    
-                                            </div>
-                                           
-                                            <div class ="row"> <div class="col topDivider"></div></div>
-            
-                                            <div class="row">
-                                                <div class="cardPriceMessage col-5">
-                                                    판매가
-                                                </div>
-                                                <div class="cardPrice col d-flex align-items-center flex-row-reverse flex-wrap">
-                                                    17,9000원
-                                                </div>
-                                            </div>
-                                            <div class="topDivider"></div>
-            
-                                            <div class="container mt-2">
-                                                <div class="row">
-                                                    <div class="col-6 cardDetailInfoBox">
-                                                        <div class ="subUpperMessage row">업체지급액 </div>
-                                                        <div class ="subPriceAndRate row">40,000원 </div>
-                                                    </div>
-                                                    <div class="col-6 cardDetailInfoBox">
-                                                        <div class ="subUpperMessage row">마진율 </div>
-                                                        <div class ="subPriceAndRate row">15% </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-6 cardDetailInfoBox">
-                                                        <div class ="subUpperMessage row">주문수량 </div>
-                                                        <div class ="subPriceAndRate row">3,477개 </div>
-                                                    </div>
-                                                    <div class="col-6 cardDetailInfoBox">
-                                                        <div class ="subUpperMessage row">총주문금액 </div>
-                                                        <div class ="subPriceAndRate row">201,007,371원 </div>
-                                                    </div>
-                                                </div>  
-                                                <div class="row">
-                                                    <div class="col-6 cardDetailInfoBox">
-                                                        <div class ="subUpperMessage row">순주문금액 </div>
-                                                        <div class ="subPriceAndRate row">201,007,371원 </div>
-                                                    </div>
-                                                    <div class="col-6 cardDetailInfoBox">
-                                                        <div class ="subUpperMessage row">예상취급액 </div>
-                                                        <div class ="subPriceAndRate row">108,314,820원 </div>
-                                                    </div>
-                                                </div>  
-                                                <div class="row">
-                                                    <div class="col-6 cardDetailInfoBox">
-                                                        <div class ="subUpperMessage row">누적UV </div>
-                                                        <div class ="subPriceAndRate row">201,007,371 </div>
-                                                    </div>        
-                                                    <div class="col-6 cardDetailInfoBox">
-                                                        <div class ="subUpperMessage row">누적CR </div>
-                                                        <div class ="subPriceAndRate row">30.42% </div>
-                                                    </div>        
-                                                </div>
-                                            </div>
-                                            <div class ="row"> <div class="col topDivider"></div></div>
-                                            <div class="row">
-                                                <div class="warningMessage col-6">
-                                                    <img src="/images/cardImages/warningIcon.png" class="warningImage">
-                                                    일부 속성 품절                     
-                                                </div>
-                                                <div class="col-6 d-flex align-items-center flex-row-reverse flex-wrap">
-                                                    <a href=# class="contactLabel">연락하기</a>
-                                                </div>
-                                            </div>
-
-                    
+                        <div class="card cardBackground flex-shrink-0 container-fluid">
+                            <div class="row" style="padding-top:5px">
+                                <a class="col-4 d-flex align-self-center" href="#" style = "height: 96px; align-items: center;">
+                                    <img src="/images/cardImages/sample.png" class="cardImage">
+                                </a>
+                                <div class="col">
+                                    <div class="row" style="margin-top: 10px"> <div class="col cardProductCode"> 상품코드 : 99999999</div> </div>
+                                    <div class="row"> <div class="col cardCompanyName"> 올리비아비 / 주식회사 세정글로벌</div></div>
+                                    <div class="row"> <div class="col cardProductName"> [몬테밀라노] 몬테밀라노 </div></div>
+                                    <div class="row"> <div class="col cardProductSubName"> [OLIVIA.B] 레인 드롭 후드...</div></div>
+                                </div>    
                             </div>
-                    
-        <!----------------------------------DONE------------------------------------------------>
+                            
+                            <div class ="row"> <div class="col topDivider"></div></div>
+
+                            <div class="row">
+                                <div class="cardPriceMessage col-5">
+                                    판매가
+                                </div>
+                                <div class="cardPrice col d-flex align-items-center flex-row-reverse flex-wrap">
+                                    17,9000원
+                                </div>
+                            </div>
+                            <div class="topDivider"></div>
+
+                            <div class="container mt-2">
+                                <div class="row">
+                                    <div class="col-6 cardDetailInfoBox">
+                                        <div class ="subUpperMessage row">업체지급액 </div>
+                                        <div class ="subPriceAndRate row">40,000원 </div>
+                                    </div>
+                                    <div class="col-6 cardDetailInfoBox">
+                                        <div class ="subUpperMessage row">마진율 </div>
+                                        <div class ="subPriceAndRate row">15% </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 cardDetailInfoBox">
+                                        <div class ="subUpperMessage row">주문수량 </div>
+                                        <div class ="subPriceAndRate row">3,477개 </div>
+                                    </div>
+                                    <div class="col-6 cardDetailInfoBox">
+                                        <div class ="subUpperMessage row">총주문금액 </div>
+                                        <div class ="subPriceAndRate row">201,007,371원 </div>
+                                    </div>
+                                </div>  
+                                <div class="row">
+                                    <div class="col-6 cardDetailInfoBox">
+                                        <div class ="subUpperMessage row">순주문금액 </div>
+                                        <div class ="subPriceAndRate row">201,007,371원 </div>
+                                    </div>
+                                    <div class="col-6 cardDetailInfoBox">
+                                        <div class ="subUpperMessage row">예상취급액 </div>
+                                        <div class ="subPriceAndRate row">108,314,820원 </div>
+                                    </div>
+                                </div>  
+                                <div class="row">
+                                    <div class="col-6 cardDetailInfoBox">
+                                        <div class ="subUpperMessage row">누적UV </div>
+                                        <div class ="subPriceAndRate row">201,007,371 </div>
+                                    </div>        
+                                    <div class="col-6 cardDetailInfoBox">
+                                        <div class ="subUpperMessage row">누적CR </div>
+                                        <div class ="subPriceAndRate row">30.42% </div>
+                                    </div>        
+                                </div>
+                            </div>
+                            <div class ="row"> <div class="col topDivider"></div></div>
+                            <div class="row">
+                                <div class="warningMessage col-6">
+                                    <img src="/images/cardImages/warningIcon.png" class="warningImage">
+                                    일부 속성 품절                     
+                                </div>
+                                <div class="col-6 d-flex align-items-center flex-row-reverse flex-wrap">
+                                    <a href=# class="contactLabel">연락하기</a>
+                                </div>
+                            </div>
+                        </div>            
                     </div>
                 </div>
             </div>
         </div>
 
+
+
         <!--SCRIPT-->
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
+        <script src="/javascripts/index.js"></script>
+        <script src="/javascripts/modalControl.js"></script>
     </body>
 </html>
 

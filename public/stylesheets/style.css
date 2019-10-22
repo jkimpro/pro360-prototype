@@ -52,10 +52,20 @@ a{
 .img-container {
   text-align: center;
 }
+
 .settingBtn{
   width: 18px;
-  height: 18px;
+  height: 25px;
   object-fit: contain;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent;
+  border: none;
+}
+
+.settingBtnImg{
+  width: 18px;
+  
 }
 
 .topBarRightSpace{
