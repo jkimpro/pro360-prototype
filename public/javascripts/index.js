@@ -6,6 +6,7 @@ $.ajax({
     cache:false,
     success: searchData = (data) =>{
         console.log("succeess");
+        console.log(data);
     }
 })
 
