@@ -1,8 +1,21 @@
 
+$.ajax({
+    url:'mockTable.json',
+    dataType:'json',
+    type:'get',
+    cache:false,
+    success: searchData = (data) =>{
+        console.log("succeess");
+    }
+})
+
+/*
 let searchData = () => {
-    $.getJSON("mockTable.json", function(json) {
-        console.log(json); // this will show the info it in firebug console
-    });
+    var data = $.getJSON("mockTable.json");
+    var jsontest = JSON.parse(data);
+
+    
+    console.log(jsontest);
 
     console.log("start");
     let divTemp = document.createElement('div');    
@@ -22,3 +35,4 @@ let searchData = () => {
     <div class ="row"> <div class="col topDivider"></div></div>';
     document.getElementById("cardSet").appendChild(divTemp);
 };
+*/
