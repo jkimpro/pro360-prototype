@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="/stylesheets/cardCustom.css">
         <link rel="stylesheet" href="/stylesheets/originalBootCustom.css">
         <link rel="stylesheet" href="/stylesheets/modalCustom.css">
+        <link rel="stylesheet" href="/stylesheets/datepicker.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     </head>
     <body>
         <div class="container-fluid"> 
@@ -65,21 +68,23 @@
         <div class="modal fade" id="searchItemModal" tabindex="-1" role="dialog" aria-labelledby="searchItemModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                    <div class="modal-body modalBackground">
-                        <div class="container-fluid">
-                            <div class="row" style="margin-top:10px">
+                    <div class="modal-body modalBackground"  style="padding:10px 10px 10px 10px">
+                        <div class="container-fluid" style="padding: 0px 0px 0px 0px">
+                            <!-- <div class="row" style="margin-top:10px"> -->
+                               
                                 <table class="table modalTableStyle modalTableBorderStyle">
                                     <tbody>
                                         <tr>
-                                            <th style="border-color: #ffffff;" class="modalTableHeader">
-                                                <label for="기준" class="modalBasicFont ml-3">기준</label>
+                                            <th style="border-color: #ffffff; width:200px">
+                                                <label for="기준" class="modalBasicFont mt-2 width:100px;">기준</label>
                                             </th>
-                                            <td class="col-1"style="border-color: #ffffff;">
+                                            <td style="border-color: #ffffff; width:300px;">
+                                                <div class="mt-2">
                                                     <div class="custom-control custom-radio custom-control-inline">
                                                         <input id="isSalesRank" type="radio" name="order" value="isSalesRank" checked="checked" class="custom-control-input">
-                                                        <label for="isSalesRank" class="custom-control-label">실적기준 </label>
-                                                        <span id="bastCategory" class="ml-3">
-                                                            <select id="category" name="category" style="font-size: 14px;" onchange="callData()" class="mr-3">
+                                                        <label for="isSalesRank" class="custom-control-label"> 실적기준 </label>
+                                                        <span id="bastCategory" class="ml-10">
+                                                            <select id="category" name="category" style="font-size: 14px;" onchange="callData()">
                                                                 <option value="r01">전체</option>
                                                                 <option value="r02">TV 쇼핑</option>
                                                                 <option value="r03">백화점</option>
@@ -99,80 +104,191 @@
                                                             </select>
                                                         </span>
                                                     </div>
-                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                        <input id="isNewProduct" type="radio" name="order" value="isNewProduct" class="custom-control-input">
-                                                        <label for="isNewProduct" class="custom-control-label">
-                                                            등록기준
-                                                        </label>
-                                                    </div>
+
+                                            </td>
+                                            <td style="border-color: #ffffff; width:300px">
+                                                <input id="isSalesRank" type="radio" name="order" value="isSalesRank" checked="checked" class="custom-control-input">
+                                                <div class="custom-control custom-radio custom-control-inline">        
+                                                    <label for="isNewProduct" class="custom-control-label mt-2">
+                                                        등록기준
+                                                    </label>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="border-color: #ffffff;" class="modalTableHeader">
-                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">기간</label>
+                                            <td style="border-color: #ffffff;" class="d-flex align-content-center">
+                                                <label for="기간" class="modalBasicFont mt-2">기간</label>
+                                            </td>
+                                            <td style="border-color: #ffffff;">
+                                                <span id="dateArea">
+                                                    <input class="form-control" id="dates" type="text" name="dates" autocomplete="on" placeholder="기간을 선택 하세요" value="기간을 선택 하세요">
+                                                    </input>
+                                                </span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="border-color: #ffffff;"  class="modalTableHeader">
-                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">MDID/MD명</label>
+                                            <td style="border-color: #ffffff;"  class="d-flex align-content-center">
+                                                <label for="MDID/MD명" class="modalBasicFont mt-2">MDID/MD명</label>
+                                            </td>
+                                            <td style="border-color: #ffffff;"  class="">
+                                                    <input class="form-control" id="mdId" type="text" name="mdId" autocomplete="on" placeholder="기간을 선택 하세요" value="기간을 선택 하세요">      
+                                            </td>
+                                            <td style="border-color: #ffffff;"  class="">
+                                                <input class="form-control" id="mdId" type="text" name="mdId" autocomplete="on" placeholder="기간을 선택 하세요" value="기간을 선택 하세요">      
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-color: #ffffff;"  class="d-flex align-content-center">
+                                                <label for="업체코드/업체명" class="modalBasicFont mt-2">업체코드/업체명</label>
+                                            </td>
+                                            <td style="border-color: #ffffff;"  class="">
+                                                    <input class="form-control" id="mdId" type="text" name="mdId" autocomplete="on" placeholder="기간을 선택 하세요" value="기간을 선택 하세요">      
+                                            </td>
+                                            <td style="border-color: #ffffff;"  class="">
+                                                <input class="form-control" id="mdId" type="text" name="mdId" autocomplete="on" placeholder="기간을 선택 하세요" value="기간을 선택 하세요">      
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-color: #ffffff;"  class="d-flex align-content-center">
+                                                <label for="브랜드코드/브랜드명" class="modalBasicFont mt-2">브랜드코드/브랜드명</label>
                                     
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="border-color: #ffffff;"  class="modalTableHeader">
-                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">업체코드/업체명</label>
-                                    
+                                            
+                                            <td style="border-color: #ffffff;"  class="">
+                                                    <input class="form-control" id="mdId" type="text" name="mdId" autocomplete="on" placeholder="기간을 선택 하세요" value="기간을 선택 하세요">      
+                                            </td>
+                                            <td style="border-color: #ffffff;"  class="">
+                                                <input class="form-control" id="mdId" type="text" name="mdId" autocomplete="on" placeholder="기간을 선택 하세요" value="기간을 선택 하세요">      
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="border-color: #ffffff;"  class="modalTableHeader">
-                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">브랜드코드/브랜드명</label>
-                                    
+                                            <td style="border-color: #ffffff;"  class="d-flex align-content-center">
+                                                <label for="기준" class="modalBasicFont mt-2">상품코드</label>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="border-color: #ffffff;"  class="modalTableHeader">
-                                                <label for="기준" class="modalBasicFont modalTableBorderStyle ml-3">상품코드</label>
-                                    
+                                            <td colspan="2" style="border-color: #ffffff;">
+                                                <textarea class="form-control" style="height:85px" id="mdId" type="text" name="mdId" autocomplete="on"> </textarea>
                                             </td>
                                         </tr>
                                     </tbody>
+                                <!-- 나가는 버튼 여기다 생성하기 -->
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <!-- <span aria-hidden="true">&times;</span> -->
+                                        <img src="/images/modalImages/closeIcon.png">
+                                    </button>    
                                 </table>
-                            </div> 
+                                <div style=" width: 100%;
+                                height: 1px;
+                                background-color: rgba(27, 35, 52, 0.08);">
+                                </div>
+
+
+
+                                <table class="table  modalTableBorderStyle">
+                                    <tbody>
+                                        <tr>
+                                            <th row="2" style="border-color: #ffffff; width:165px">
+                                                <label for="기준" class="modalBasicFont mt-2 width:100px;">노출항목</label>
+                                            </th>
+                                            <td colspan="2" style="border-color: #ffffff;">
+                                                <div class="form-check custom-control custom-checkbox" style="margin-top:7px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="priceItem" name="show_type[]" value="priceItem" checked>
+                                                    <label for="priceItem" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">판매가</label>                               
+                                                </div>
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:10px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="uv" name="show_type[]" value="priceItem" checked>
+                                                    <label for="uv" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">UV</label>                               
+                                                </div>
+                                            </td>
+                                            <td colspan="2" style="border-color: #ffffff;">
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:7px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="venderPrice" name="show_type[]" value="priceItem" checked>
+                                                    <label for="venderPrice" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">업체지급액</label>                               
+                                                </div>
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:10px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="cr" name="show_type[]" value="priceItem" checked>
+                                                    <label for="cr" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">CR</label>                               
+                                                </div>
+                                            </td>
+                                            <td colspan="2" style="border-color: #ffffff;">
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:7px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="marginRate" name="show_type[]" value="priceItem" checked>
+                                                    <label for="marginRate" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">마진율</label>                               
+                                                </div>
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:10px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="freeDelv" name="show_type[]" value="priceItem" checked>
+                                                    <label for="freeDelv" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">무료배송</label>                               
+                                                </div>
+                                            </td>
+                                            <td  colspan="2" style="border-color: #ffffff;">
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:7px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="totalOrderQt" name="show_type[]" value="priceItem" checked>
+                                                    <label for="totalOrderQt" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">총주문수량</label>                               
+                                                </div>
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:10px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="pureOrdPrice" name="show_type[]" value="priceItem" checked>
+                                                    <label for="pureOrdPrice" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">순주문금액</label>                               
+                                                </div>
+                                            </td>
+                                            <td  colspan="2" style="border-color: #ffffff;">
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:7px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="totalOrderPrice" name="show_type[]" value="priceItem" checked>
+                                                    <label for="totalOrderPrice" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">총주문금액</label>                               
+                                                </div>
+                                                <div class="form-check custom-control custom-checkbox"style="margin-top:10px;">
+                                                    <input type="checkbox"  class="custom-control-input" id="expctSalAmt" name="show_type[]" value="priceItem" checked>
+                                                    <label for="expctSalAmt" class="checkBoxFont custom-control-label" style="padding:2px 0px 0px 0px;">예상취급액</label>                               
+                                                </div>
+                                            </td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                            <!-- </div>  -->
                         </div>
+                        <div class="modalBlank" style="height:15px"></div>                         
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-5 d-flex align-content-center">
+                                    <a class="detailOptionBtn btn btn-link" href="#" >자세히 알아보기</a>
+                                </div>
+
+                                <div class="col d-flex align-content-center flex-row-reverse flex-wrap">
+                                    <a href="#" class="btn btn-primary btn-lg active" role="button"style="
+                                        font-family: SFProText;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.47;
+                                        letter-spacing: -0.4px;
+                                        color: #ffffff;">
+                                        검색
+                                    </a>
+                                    <a href="#" class="btn btn-outline-light" role="button"style="
+                                        font-family: SFProText;
+                                        font-size: 14px;
+                                        font-weight: normal;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.43;
+                                        letter-spacing: -0.37px;
+                                        text-align: center;
+                                        color: #1b2334;
+                                        margin-right:12px;">
+                                        재설정
+                                    </a>
+                                </div>
+
+
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
         </div>
 
         
-        <!-- <div class="modal fade" id="searchItemModal" tabindex="-1" role="dialog" aria-labelledby="searchItemModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-body modalBackground">
-                        <div class="container-fluid">
-                            <div class="row" style="margin-top:10px">
-                                <div class="col-3 modalBasicFont">기준</div>
-                                <div class="col-2 modalBoldFont">
-                                    실적기준
-                                </div>
-                            </div>
-                            <div class="row">
-
-                            </div>
-                            <div class="row">
-
-                            </div> 
-                        </div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+      
 
         
 
@@ -242,6 +358,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class ="col-12 d-flex align-content-center">
+
                      <!--카드 대크---------------------------------------->
                     <div id="cardSet" class="card-deck mr-0 ml-0 flex-grow-0 d-flex align-items-center flex-wrap">
                         <div class="card cardBackground flex-shrink-0 container-fluid">
@@ -334,6 +451,11 @@
         <script src="/js/bootstrap.min.js"></script>
         <script src="/javascripts/index.js"></script>
         <script src="/javascripts/modalControl.js"></script>
+        <script src="/javascripts/dateRangePicker.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    
     </body>
 </html>
 

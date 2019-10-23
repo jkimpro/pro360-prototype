@@ -6,7 +6,7 @@
   }
 
 .modalTableStyle{
-      width:600px;
+      width:670px;
 }
 .modalTableBorderStyle{
 border-color: #ffffff;
@@ -40,4 +40,15 @@ width: 186px;
 height: 36px;
 background-color: rgba(0, 0, 0, 0);
 
+}
+
+.checkBoxFont{
+      font-family: AppleSDGothicNeo;
+      font-size: 13px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: -0.37px;
+      color: #1b2334;
 }
