@@ -96,25 +96,29 @@ a{
 }
 
 .optionBtn{
-  background-color: rgba(0, 0, 0, 0);
+  height: 56px;
   font-family: AppleSDGothicNeo;
   font-size: 14px;
   font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
   line-height: 1.57;
   letter-spacing: -0.37px;
   text-align: center;
-  color: #0269e6;
+  color: rgba(50, 60, 81, 0.6);
 }
 
 .optionNavRightBtn{
   height: 40px;
   border-radius: 4px;
   background-color: #ffffff;
+  font-family: SFProText;
   font-size: 14px;
-  font-weight: 600;
-  line-height: 1.57;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
   letter-spacing: -0.37px;
-  text-align: center;
   color: #1b2334;
 }
 

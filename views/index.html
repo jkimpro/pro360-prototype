@@ -6,11 +6,9 @@
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/selectCustom.css">
         <link rel="stylesheet" href="/stylesheets/cardCustom.css">
-        <link rel="stylesheet" href="/stylesheets/originalBootCustom.css">
         <link rel="stylesheet" href="/stylesheets/modalCustom.css">
         <link rel="stylesheet" href="/stylesheets/datepicker.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
     </head>
     <body>
         <div class="container-fluid"> 
@@ -279,41 +277,43 @@
                                     </a>
                                 </div>
 
-
                             </div>
                         </div> 
                     </div>
                 </div>
             </div>
         </div>
-
-        
-      
-
-        
-
         <div class="container-fluid">
             <div class="row">
                 <div class="optionNav col-12 d-flex align-content-center">
-                    <ul class="nav col-5 d-flex align-content-center flex-row flex-wrap">
+                    <!-- <ul class="nav col-5 d-flex align-content-center flex-row flex-wrap">
                         <li class="optionBtn nav-item" style="margin-left:10px">
-                            <a class="nav-link active" href="#">기본 이미지 보기</a>
+                            <a class="nav-link active" href="#" onClick= "pageSet('basic')" >기본 이미지 보기</a>
                         </li>
-                        <li class="optionBtn nav-item" style="margin-left:8px">
+                        <li class="optionBtn nav-item" style="margin-left:8px" onClick= "pageSet('mobile')">
                             <a class="nav-link" href="#">모바일 배너로 보기</a>
                         </li>
-                    </ul>
+                    </ul> -->
+
+                    <div class="col-5 d-flex align-content-center flex-row flex-wrap">
+                        <div class="optionBtn" style="margin-left:10px">
+                            <a href="#" onClick= "pageSet('basic')" >기본 이미지 보기</a>
+                        </div>
+                        <div class="optionBtn" style="margin-left:8px" onClick= "pageSet('mobile')">
+                            <a href="#">모바일 배너로 보기</a>
+                        </div>
+                    </div> 
 
                     <ul class="nav col d-flex align-content-center flex-row-reverse flex-wrap">
                         <li class="optionNavRightBtn nav-item" style="margin-left:10px">
                             <a class="nav-link active" href="#">
-                                    <img src="/images/secondBarImages/excelIcon.png" style="margin-bottom: 2px;"> 엑셀 다운로드 </a>
+                                <img src="/images/secondBarImages/excelIcon.png" style="margin-bottom: 2px;"> 엑셀 다운로드 </a>
                         </li>
                         <li class="optionNavRightBtn nav-item" style="margin-left:8px">
                             <a class="nav-link" href="#">
-                                    <img src="/images/secondBarImages/camera.png" style="margin-bottom: 2px;"> 화면 캡쳐 </a>
+                                <img src="/images/secondBarImages/camera.png" style="margin-bottom: 2px;"> 화면 캡쳐 </a>
                         </li>
-                    </ul>     
+                    </ul>    
                 </div>
                 <!-- 하단 옵션   background-color: #eef1f7;-->
             </div>
@@ -324,12 +324,12 @@
             <div class="row" style="padding-bottom:10px;">
                 <div class="detailOptionNav col-12 d-flex align-content-center">
                     <ul class="nav col-5 nav-pills nav-fill d-flex align-content-center flex flex-wrap">
-                        <a class="detailOptionBtn nav-link" href="#">판매량순</a>
-                        <a class="detailOptionBtn text-sm-center nav-link" href="#">업체순</a>
-                        <a class="detailOptionBtn nav-link" href="#" >브랜드순</a>
-                        <a class="detailOptionBtn nav-link" href="#" >지금베스트순</a>
-                        <a class="detailOptionBtn nav-link" href="#" >UV</a>
-                        <a class="detailOptionBtn nav-link" href="#" >CR</a>
+                        <a class="detailOptionBtn badge badge-pill badge-light" style="margin-left:10px" href="#">판매량순</a>
+                        <a class="detailOptionBtn badge badge-pill badge-light" href="#">업체순</a>
+                        <a class="detailOptionBtn badge badge-pill badge-light" href="#" >브랜드순</a>
+                        <a class="detailOptionBtn badge badge-pill badge-light" href="#" >지금베스트순</a>
+                        <a class="detailOptionBtn badge badge-pill badge-light" href="#" >UV</a>
+                        <a class="detailOptionBtn badge badge-pill badge-light" href="#" >CR</a>
                     </ul>
     
                     <!--해당자료 참고하고 수정하기 https://getbootstrap.com/docs/4.1/components/dropdowns/ -->
