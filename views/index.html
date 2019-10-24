@@ -26,7 +26,7 @@
                             <a href="#"><img src="/images/topBarImages/searchIcon.png"> </a>
                         </div>
                         <!-- <input class="itemSearch col-10" type="text" name="itemSearch" placeholder="상품 검색"> -->
-                        <button class="itemSearch col-10 d-flex align-content-center flex-row flex-wrap" name="searchItemModal" onClick="searchData()"> 상품검색 </button>
+                        <button class="itemSearch col-10 d-flex align-content-center flex-row flex-wrap" name="searchItemModal" onClick="makeCard()"> 상품검색 </button>
                         <!-- <div class="col-1">
                             <a href="#"><img src="/images/topBarImages/settingIcon.png"></a>
                         </div> -->
@@ -355,12 +355,11 @@
             </div>
         </div>
         
-        <div class="container-fluid">
-            <div class="row">
-                <div class ="col-12 d-flex align-content-center">
-
+        <div id="cardContainer" class="container-fluid">
+            <div id="cardTable" class ="col-12 d-flex align-content-center">
+                <div class="row">
                      <!--카드 대크---------------------------------------->
-                    <div id="cardSet" class="card-deck mr-0 ml-0 flex-grow-0 d-flex align-items-center flex-wrap">
+                    <div id="cardSet" class="card-deck mr-0 ml-0 flex-grow-1 d-flex align-items-center flex-wrap">
                         <div class="card cardBackground flex-shrink-0 container-fluid">
                             <div class="row" style="padding-top:5px">
                                 <a class="col-4 d-flex align-self-center" href="#" style = "height: 96px; align-items: center;">
@@ -443,6 +442,7 @@
                 </div>
             </div>
         </div>
+        
 
 
 
@@ -454,7 +454,7 @@
         <script src="/javascripts/dateRangePicker.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-        <script type="text/javascript" src="htt.ps://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     
     </body>
 </html>
