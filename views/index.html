@@ -73,15 +73,15 @@
                                 <table class="table modalTableStyle modalTableBorderStyle">
                                     <tbody>
                                         <tr>
-                                            <th style="border-color: #ffffff; width:200px">
+                                            <th style="border-color: #ffffff; width:170px">
                                                 <label for="기준" class="modalBasicFont mt-2 width:100px;">기준</label>
                                             </th>
-                                            <td style="border-color: #ffffff; width:300px;">
-                                                <div class="mt-2">
-                                                    <div class="custom-control custom-radio custom-control-inline">
+                                            <td style="border-color: #ffffff; width:330px;">
+                                                <div>
+                                                    <div class="custom-control custom-radio custom-control-inline mt-2">
                                                         <input id="isSalesRank" type="radio" name="order" value="isSalesRank" checked="checked" class="custom-control-input">
                                                         <label for="isSalesRank" class="custom-control-label"> 실적기준 </label>
-                                                        <span id="bastCategory" class="ml-10">
+                                                        <!-- <span id="bastCategory" class="ml-10">
                                                             <select id="category" name="category" style="font-size: 14px;" onchange="callData()">
                                                                 <option value="r01">전체</option>
                                                                 <option value="r02">TV 쇼핑</option>
@@ -100,14 +100,37 @@
                                                                 <option value="r15">생활/주방</option>
                                                                 <option value="r16">도서/사무용품</option>
                                                             </select>
-                                                        </span>
+                                                        </span> -->
+                                                        
                                                     </div>
-
+                                                    <button id="selectNow" value="r01" type="button" class="btn btn-secondary dropdown-toggle" style="
+                                                    text-align: right; width:120px; height: 36px; color:black;background-color: #ffffff; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                        전체
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <button id="r01" class="r01 dropdown-item" type="button" value="r01" onClick="modalSelect('r01')">전체</button>
+                                                        <button id="r02" class="r02 dropdown-item" type="button" value="r02" onClick="modalSelect('r02')">TV 쇼핑</button>
+                                                        <button id="r03"class="r03 dropdown-item" type="button" value="r03" onClick="modalSelect('r03')">백화점</button>
+                                                        <button id="r04"class="r04 dropdown-item" type="button" value="r04" onClick="modalSelect('r04')">패션의류/속옷</button>
+                                                        <button id="r05"class="r05 dropdown-item" type="button" value="r05" onClick="modalSelect('r05')">출산/유아동</button>
+                                                        <button id="r06" class="r06 dropdown-item" type="button" value="r06" onClick="modalSelect('r06')">뷰티</button>
+                                                        <button id="r07" class="r07 dropdown-item" type="button" value="r07" onClick="modalSelect('r07')">스포츠/레저</button>
+                                                        <button id="r08" class="r08 dropdown-item" type="button" value="r08" onClick="modalSelect('r08')">가구/침구/홈데코</button>
+                                                        <button id="r09" class="r09 dropdown-item" type="button" value="r09" onClick="modalSelect('r09')">식품</button>
+                                                        <button id="r10" class="r10 dropdown-item" type="button" value="r10" onClick="modalSelect('r10')">가전/디지털</button>
+                                                        <button id="r11" class="r11 dropdown-item" type="button" value="r11" onClick="modalSelect('r11')">반려동물</button>
+                                                        <button id="r12" class="r12 dropdown-item" type="button" value="r12" onClick="modalSelect('r12')">여행/티켓</button>
+                                                        <button id="r13" class="r13 dropdown-item" type="button" value="r13" onClick="modalSelect('r13')">잡화/슈즈/보석</button>
+                                                        <button id="r14" class="r14 dropdown-item" type="button" value="r14" onClick="modalSelect('r14')">명품/해외직구</button>
+                                                        <button id="r15" class="r15 dropdown-item" type="button" value="r15" onClick="modalSelect('r15')">생활/주방</button>
+                                                        <button id="r16" class="r16 dropdown-item" type="button" value="r16" onClick="modalSelect('r16')">도서/사무용품</button>
+                                                    </div>
+                                                </div>
                                             </td>
                                             <td style="border-color: #ffffff; width:300px">
-                                                <input id="isSalesRank" type="radio" name="order" value="isSalesRank" checked="checked" class="custom-control-input">
                                                 <div class="custom-control custom-radio custom-control-inline">        
-                                                    <label for="isNewProduct" class="custom-control-label mt-2">
+                                                        <input id="isRegistRank" type="radio" name="order" value="isRegistRank" checked="checked" class="custom-control-input">
+                                                        <label for="isRegistRank" class="custom-control-label mt-2">
                                                         등록기준
                                                     </label>
                                                 </div>
@@ -184,7 +207,7 @@
                                 <table class="table  modalTableBorderStyle">
                                     <tbody>
                                         <tr>
-                                            <th row="2" style="border-color: #ffffff; width:165px">
+                                            <th row="2" style="border-color: #ffffff; width:145px">
                                                 <label for="기준" class="modalBasicFont mt-2 width:100px;">노출항목</label>
                                             </th>
                                             <td colspan="2" style="border-color: #ffffff;">
@@ -286,24 +309,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="optionNav col-12 d-flex align-content-center">
-                    <!-- <ul class="nav col-5 d-flex align-content-center flex-row flex-wrap">
-                        <li class="optionBtn nav-item" style="margin-left:10px">
-                            <a class="nav-link active" href="#" onClick= "pageSet('basic')" >기본 이미지 보기</a>
-                        </li>
-                        <li class="optionBtn nav-item" style="margin-left:8px" onClick= "pageSet('mobile')">
-                            <a class="nav-link" href="#">모바일 배너로 보기</a>
-                        </li>
-                    </ul> -->
+               
 
                     <div class="col-5 d-flex align-content-center flex-row flex-wrap">
-                        <div class="optionBtn" style="margin-left:10px">
-                            <a href="#" onClick= "pageSet('basic')" >기본 이미지 보기</a>
+                        <div id="watchBasic" class="d-flex align-content-center flex-wrap" style="width:120px; margin-left:10px;">
+                            <a href="#" id="basicFont"  class="optionBtn" style="padding-left: 6px;" onClick= "pageSet('basic')" >기본 이미지 보기</a>
                         </div>
-                        <div class="optionBtn" style="margin-left:8px" onClick= "pageSet('mobile')">
-                            <a href="#">모바일 배너로 보기</a>
+                        <div id="watchMobile" class="d-flex align-content-center flex-wrap" style="width:120px; margin-left:10px;">
+                            <a href="#"  id="moblieFont" style="" class="optionBtn" onClick= "pageSet('mobile')">모바일 배너로 보기</a>
                         </div>
                     </div> 
-
+                    <!-- font-color: rgba(50, 60, 81, 0.6); -->
                     <ul class="nav col d-flex align-content-center flex-row-reverse flex-wrap">
                         <li class="optionNavRightBtn nav-item" style="margin-left:10px">
                             <a class="nav-link active" href="#">
@@ -334,21 +350,32 @@
     
                     <!--해당자료 참고하고 수정하기 https://getbootstrap.com/docs/4.1/components/dropdowns/ -->
                     <div class="detailOptionNav col d-flex align-content-center flex-row-reverse flex-wrap">
-                        <div class ="col-2">
-                            <select class="custom-select">
+                        <div class ="dropdown">
+                            <!-- <select class="custom-select">
                                 <option value="50">50 개씩 보기</option>
                                 <option value="100">100 개씩 보기</option>
                                 <option value="200">200 개씩 보기</option>
                                 <option value="300">300 개씩 보기</option>
-                            </select>    
+                            </select>     -->
+                            <button type="button" class="btn btn-secondary dropdown-toggle" style="color:black;background-color: #eef1f7; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                필터
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <button class="dropdown-item" type="button">Action</button>
+                                <button class="dropdown-item" type="button">Another action</button>
+                                <button class="dropdown-item" type="button">Something else here</button>
+                            </div>
                         </div>
-                        <div class ="col-2">
-                            <select class="custom-select">
-                                <option value="50">50 개씩 보기</option>
-                                <option value="100">100 개씩 보기</option>
-                                <option value="200">200 개씩 보기</option>
-                                <option value="300">300 개씩 보기</option>
-                            </select>    
+                        <div class ="dropdown" style="margin-right:10px">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" style="color:black;background-color: #eef1f7; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                50개씩 보기
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <button class="dropdown-item" type="button">50개씩 보기</button>
+                                <button class="dropdown-item" type="button">100개씩 보기</button>
+                                <button class="dropdown-item" type="button">200개씩 보기</button>
+                                <button class="dropdown-item" type="button">300개씩 보기</button>
+                            </div>
                         </div>    
                     </div>      
                 </div>
@@ -442,13 +469,15 @@
                 </div>
             </div>
         </div>
-        
-
-
+       
 
         <!--SCRIPT-->
         <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/bootstrap.bundle.js"></script>
         <script src="/js/bootstrap.min.js"></script>
+       
+    
         <script src="/javascripts/index.js"></script>
         <script src="/javascripts/modalControl.js"></script>
         <script src="/javascripts/dateRangePicker.js"></script>

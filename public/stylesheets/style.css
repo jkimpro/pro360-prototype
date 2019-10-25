@@ -22,12 +22,7 @@ a{
 
 .searchBar {
   width: 85%;
-  
-  /*height: 55%;
-   width: 609px;
-  */
   height: 40px;
-  
   border-radius: 4px;
   background-color: #eef1f7;
 }
@@ -96,7 +91,6 @@ a{
 }
 
 .optionBtn{
-  height: 56px;
   font-family: AppleSDGothicNeo;
   font-size: 14px;
   font-weight: 600;
@@ -105,7 +99,6 @@ a{
   line-height: 1.57;
   letter-spacing: -0.37px;
   text-align: center;
-  color: rgba(50, 60, 81, 0.6);
 }
 
 .optionNavRightBtn{

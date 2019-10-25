@@ -6,18 +6,17 @@
   }
 
 .modalTableStyle{
-      width:670px;
+     width:670px;
 }
 .modalTableBorderStyle{
 border-color: #ffffff;
 }
 .modalTableHeader{
-      width:20%;
       height:70px;
 }
 .modalBasicFont{
 font-family: AppleSDGothicNeo;
-font-size: 14px;
+font-size: 13px;
 font-weight: normal;
 font-stretch: normal;
 font-style: normal;

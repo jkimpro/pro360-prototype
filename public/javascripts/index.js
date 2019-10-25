@@ -147,11 +147,35 @@ let makeCard = () =>{
 }
 
 let pageSet=(page)=>{
+    let set = document.getElementById('watchBasic');
+    let setFont = document.getElementById('basicFont');
+
+    let dset = document.getElementById('watchMobile');
+    let dsetFont = document.getElementById('mobileFont');
+    //color: #0269e6;
+// <div class="col-5 d-flex align-content-center flex-row flex-wrap">
+//                     <div id="watchBasic" class="optionBtn d-flex align-content-center flex-wrap" style="width:120px; margin-left:10px;">
+//                         <a href="#" id="basicFont" style="padding-left: 6px; padding-top:" onClick= "pageSet('basic')" >기본 이미지 보기</a>
+//                     </div>
+//                     <div id="watchMobile" class="optionBtn  d-flex align-content-center flex-wrap" style="width:120px; margin-left:10px">
+//                         <a href="#" id="moblieFont" class="optionBtn" onClick= "pageSet('mobile')">모바일 배너로 보기</a>
+//                     </div>
+    //                 </div> 
 
     if(page==='mobile'){
-  
+   
+        set.style = 'width:120px; height:100%; margin-left:10px;';
+        dset.style = 'width:120px; height:100%; margin-left:10px; border-bottom:2px solid #0062ff;';
+        
+        setFont.style='padding-left: 6px;';
+        dsetFont.style='color: #0269e6';
     }
     else{
+        set.style = 'width:120px; height:100%; margin-left:10px; border-bottom:2px solid #0062ff;';
+        dset.style = 'width:120px; height:100%; margin-left:10px;';
+
+        setFont.style='padding-left: 6px; color: #0269e6';
+        dsetFont.style='';
     }
 }
 
