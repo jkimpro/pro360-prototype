@@ -81,31 +81,9 @@
                                                     <div class="custom-control custom-radio custom-control-inline mt-2">
                                                         <input id="isSalesRank" type="radio" name="order" value="isSalesRank" checked="checked" class="custom-control-input">
                                                         <label for="isSalesRank" class="custom-control-label"> 실적기준 </label>
-                                                        <!-- <span id="bastCategory" class="ml-10">
-                                                            <select id="category" name="category" style="font-size: 14px;" onchange="callData()">
-                                                                <option value="r01">전체</option>
-                                                                <option value="r02">TV 쇼핑</option>
-                                                                <option value="r03">백화점</option>
-                                                                <option value="r04">패션의류/속옷</option>
-                                                                <option value="r05">출산/유아동</option>
-                                                                <option value="r06">뷰티</option>
-                                                                <option value="r07">스포츠/레저</option>
-                                                                <option value="r08">가구/침구/홈데코</option>
-                                                                <option value="r09">식품</option>
-                                                                <option value="r10">가전/디지털</option>
-                                                                <option value="r11">반려동물</option>
-                                                                <option value="r12">여행/티켓</option>
-                                                                <option value="r13">잡화/슈즈/보석</option>
-                                                                <option value="r14">명품/해외직구</option>
-                                                                <option value="r15">생활/주방</option>
-                                                                <option value="r16">도서/사무용품</option>
-                                                            </select>
-                                                        </span> -->
-                                                        
                                                     </div>
-                                                    <button id="selectNow" value="r01" type="button" class="btn btn-secondary dropdown-toggle" style="
-                                                    text-align: right; width:120px; height: 36px; color:black;background-color: #ffffff; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                        전체
+                                                    <button id="selectNow" value="r01" type="button" class="btn btn-secondary" style="
+                                                    text-align: right; width:120px; height: 36px; color:black;background-color: #ffffff; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">전체<i> <img src="images/selectImages/dropDownIcon.png"></i>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <button id="r01" class="r01 dropdown-item" type="button" value="r01" onClick="modalSelect('r01')">전체</button>
@@ -172,7 +150,6 @@
                                         <tr>
                                             <td style="border-color: #ffffff;"  class="d-flex align-content-center">
                                                 <label for="브랜드코드/브랜드명" class="modalBasicFont mt-2">브랜드코드/브랜드명</label>
-                                    
                                             </td>
                                             
                                             <td style="border-color: #ffffff;"  class="">
@@ -309,7 +286,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="optionNav col-12 d-flex align-content-center">
-               
+
 
                     <div class="col-5 d-flex align-content-center flex-row flex-wrap">
                         <div id="watchBasic" class="d-flex align-content-center flex-wrap" style="width:120px; margin-left:10px;">
@@ -351,14 +328,9 @@
                     <!--해당자료 참고하고 수정하기 https://getbootstrap.com/docs/4.1/components/dropdowns/ -->
                     <div class="detailOptionNav col d-flex align-content-center flex-row-reverse flex-wrap">
                         <div class ="dropdown">
-                            <!-- <select class="custom-select">
-                                <option value="50">50 개씩 보기</option>
-                                <option value="100">100 개씩 보기</option>
-                                <option value="200">200 개씩 보기</option>
-                                <option value="300">300 개씩 보기</option>
-                            </select>     -->
-                            <button type="button" class="btn btn-secondary dropdown-toggle" style="color:black;background-color: #eef1f7; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn btn-secondary" style="color:black;background-color: #eef1f7; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 필터
+                                <i> <img src="images/selectImages/dropDownIcon.png"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <button class="dropdown-item" type="button">Action</button>
@@ -367,8 +339,9 @@
                             </div>
                         </div>
                         <div class ="dropdown" style="margin-right:10px">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" style="color:black;background-color: #eef1f7; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn btn-secondary" style="color:black;background-color: #eef1f7; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 50개씩 보기
+                                <i> <img src="images/selectImages/dropDownIcon.png"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <button class="dropdown-item" type="button">50개씩 보기</button>
@@ -384,10 +357,10 @@
         
         <div id="cardContainer" class="container-fluid">
             <div id="cardTable" class ="col-12 d-flex align-content-center">
-                <div class="row">
+                <div class="row mr-0 ml-0 flex-grow-0 d-flex align-items-center flex-wrap" style="margin-bottom:28px">
                      <!--카드 대크---------------------------------------->
                     <div id="cardSet" class="card-deck mr-0 ml-0 flex-grow-1 d-flex align-items-center flex-wrap">
-                        <div class="card cardBackground flex-shrink-0 container-fluid">
+                        <div class="card cardBackground container-fluid">
                             <div class="row" style="padding-top:5px">
                                 <a class="col-4 d-flex align-self-center" href="#" style = "height: 96px; align-items: center;">
                                     <img src="/images/cardImages/sample.png" class="cardImage">

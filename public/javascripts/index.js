@@ -33,7 +33,7 @@ let makeCardSet = ()=>{
     rowTemp.style ='margin-bottom:28px';
 
     let divTemp = document.createElement('div');    
-    divTemp.className = 'card-deck mr-0 ml-0 flex-grow-0 d-flex align-items-center flex-wrap'
+    divTemp.className = 'card-deck mr-0 ml-0 flex-grow-1 d-flex align-items-center flex-wrap'
     divTemp.id = 'cardSet'+cardSetCount;
     console.log(divTemp.id);
 
@@ -54,11 +54,14 @@ let makeCard = () =>{
     if(isInit == false){            //
         initTable.innerHTML = "";
         initTable.innerHTML =  '<div class="row" style="margin-bottom:28px">\
-            <div id="cardSet0" class="card-deck mr-0 ml-0 flex-grow-0 d-flex align-items-center flex-wrap">\
+            <div id="cardSet0" class="card-deck mr-0 ml-0 flex-grow-1 d-flex align-items-center flex-wrap">\
             </div></div>';    
         isInit = true;
     }
     
+    // 남은 카드 개수에 따라 col의크기를 결정할 것
+    
+
     //데이터 매핑
     data.map((element)=>{
         if(cardCount!==0 && cardCount%4 === 0){ 
@@ -71,7 +74,7 @@ let makeCard = () =>{
         let divTemp = document.createElement('div');
         let imageUrl = `http://image.gsshop.com/image/${String(element.prd_cd).substring(0, 2)}/${String(element.prd_cd).substring(2, 4)}/${element.prd_cd}${$(".nav-link.active").attr('id') === 'pc'? '_N1.jpg':'_B1.jpg'}`;
   
-        divTemp.className = 'card cardBackground flex-shrink-0 container-fluid';
+        divTemp.className = 'card cardBackground container-fluid';
         divTemp.innerHTML = `<div class="row" style="padding-top:5px">
             <a class="col-4 d-flex align-self-center" href="#" style = "height: 96px; align-items: center;">
                 <img src="${imageUrl}" class="cardImage">
