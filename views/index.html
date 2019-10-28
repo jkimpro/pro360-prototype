@@ -2,15 +2,66 @@
 <html>
     <head>
         <title>product360 prototype</title>
+        <meta charset = "utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/mainStyle.css">
         <link rel="stylesheet" href="/stylesheets/selectCustom.css">
         <link rel="stylesheet" href="/stylesheets/cardCustom.css">
         <link rel="stylesheet" href="/stylesheets/modalCustom.css">
         <link rel="stylesheet" href="/stylesheets/datepicker.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     </head>
-    <body>
+    <body style="padding-top: 64px;">
+        <nav class="navbar navbar-default fixed-top navbar-expand-md navbar-light bg-light" style="padding:0px 0px 0px 0px">
+            <div class="container-fluid topBar" style="padding:0px 0px 0px 0px">
+                <div class="col-2 topBar">
+                    <div class="logoSpace">
+                        <img src = "/images/topBarImages/logo-space.png" style="margin-top:3px">   
+                    </div>
+                </div>
+
+                <div class="col-6 topBar d-flex align-content-center flex-wrap">
+                    <div class= "searchBar row d-flex align-content-center flex-wrap mw-100 mh-100" >
+                        <div class="col-1">
+                            <a href="#"><img src="/images/topBarImages/searchIcon.png"> </a>
+                        </div>
+                        <button class="itemSearch col-10 d-flex align-content-center flex-row flex-wrap" name="searchItemModal" onClick="makeCardV2()"> 상품검색 </button>
+                        <button class="col settingBtn" data-toggle="modal" data-target="#searchItemModal"> 
+                            <img class="settingBtnImg" src="/images/topBarImages/settingIcon.png">
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="col topBar d-flex align-content-center flex-row-reverse flex-wrap">
+                    <div class="topBarRightSpace img-container" style="padding-top:8px;">
+                        <a href="#"><img src="/images/topBarImages/thumbnail.png"></a>
+                    </div>
+                    <div class="topBarRightSpace img-container" style="padding-top:12px">
+                        <a href="#"><img src="/images/topBarImages/bell.png"></a>
+                    </div>
+                    <div class="qnaBtn float-right" style="padding-top:5px">
+                        <a href="#" class="btn btn-primary btn-lg active" role="button"style="
+                            font-family: SFProText;
+                            font-size: 15px;
+                            font-weight: 600;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.47;
+                            letter-spacing: -0.4px;
+                            color: #ffffff;">
+                            <img src="/images/topBarImages/pencil.png" style="margin-bottom: 2px;">문의/개선사항 접수
+                        </a>
+                    </div>
+                    <div class="toDoList col-4" style="padding-top:15px">
+                        <a href="#">배포 및 To Do List</a>
+                    </div>
+                </div>
+            </div>   
+        </nav>
+
+<!--      
         <div class="container-fluid"> 
             <div class = "row topBar">
                 <div class="col-2">
@@ -18,21 +69,19 @@
                         <img src = "/images/topBarImages/logo-space.png" style="margin-top:3px">   
                     </div>
                 </div>
+
                 <div class="col-6 d-flex align-content-center flex-wrap">
                     <div class= "searchBar row d-flex align-content-center flex-wrap mw-100 mh-100  " >
                         <div class="col-1">
                             <a href="#"><img src="/images/topBarImages/searchIcon.png"> </a>
                         </div>
-                        <!-- <input class="itemSearch col-10" type="text" name="itemSearch" placeholder="상품 검색"> -->
-                        <button class="itemSearch col-10 d-flex align-content-center flex-row flex-wrap" name="searchItemModal" onClick="makeCard()"> 상품검색 </button>
-                        <!-- <div class="col-1">
-                            <a href="#"><img src="/images/topBarImages/settingIcon.png"></a>
-                        </div> -->
+                        <button class="itemSearch col-10 d-flex align-content-center flex-row flex-wrap" name="searchItemModal" onClick="makeCardV2()"> 상품검색 </button>
                         <button class="col settingBtn" data-toggle="modal" data-target="#searchItemModal"> 
                             <img class="settingBtnImg" src="/images/topBarImages/settingIcon.png">
                         </button>
                     </div>
                 </div>
+
                 <div class="col d-flex align-content-center flex-row-reverse flex-wrap">
                     <div class="topBarRightSpace img-container" style="padding-top:8px;">
                         <a href="#"><img src="/images/topBarImages/thumbnail.png"></a>
@@ -58,18 +107,13 @@
                     </div>
                 </div>
             </div> 
-        </div>
-
-        <!----Modal related-->
-        <!-- data-backdrop="false" -->
-      
+        </div> -->
+        
         <div class="modal fade" id="searchItemModal" tabindex="-1" role="dialog" aria-labelledby="searchItemModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                     <div class="modal-body modalBackground"  style="padding:10px 10px 10px 10px">
                         <div class="container-fluid" style="padding: 0px 0px 0px 0px">
-                            <!-- <div class="row" style="margin-top:10px"> -->
-                               
                                 <table class="table modalTableStyle modalTableBorderStyle">
                                     <tbody>
                                         <tr>
@@ -83,12 +127,14 @@
                                                         <label for="isSalesRank" class="custom-control-label"> 실적기준 </label>
                                                     </div>
                                                     <button id="selectNow" value="r01" type="button" class="btn btn-secondary" style="
-                                                    text-align: right; width:120px; height: 36px; color:black;background-color: #ffffff; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">전체<i> <img src="images/selectImages/dropDownIcon.png"></i>
+                                                    text-align: right; width:120px; height: 36px; color:black;background-color: #ffffff; border-color:#eef1f7;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                    <span style="text-align: center">전체</span>
+                                                    <span><img src="images/selectImages/dropDownIcon.png"></span>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <button id="r01" class="r01 dropdown-item" type="button" value="r01" onClick="modalSelect('r01')">전체</button>
                                                         <button id="r02" class="r02 dropdown-item" type="button" value="r02" onClick="modalSelect('r02')">TV 쇼핑</button>
-                                                        <button id="r03"class="r03 dropdown-item" type="button" value="r03" onClick="modalSelect('r03')">백화점</button>
+                                                        <button id="r03"class="r03 dropdown-item" type="button" valfue="r03" onClick="modalSelect('r03')">백화점</button>
                                                         <button id="r04"class="r04 dropdown-item" type="button" value="r04" onClick="modalSelect('r04')">패션의류/속옷</button>
                                                         <button id="r05"class="r05 dropdown-item" type="button" value="r05" onClick="modalSelect('r05')">출산/유아동</button>
                                                         <button id="r06" class="r06 dropdown-item" type="button" value="r06" onClick="modalSelect('r06')">뷰티</button>
@@ -168,9 +214,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
-                                <!-- 나가는 버튼 여기다 생성하기 -->
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <!-- <span aria-hidden="true">&times;</span> -->
                                         <img src="/images/modalImages/closeIcon.png">
                                     </button>    
                                 </table>
@@ -178,8 +222,6 @@
                                 height: 1px;
                                 background-color: rgba(27, 35, 52, 0.08);">
                                 </div>
-
-
 
                                 <table class="table  modalTableBorderStyle">
                                     <tbody>
@@ -238,10 +280,9 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                       
+                                        
                                     </tbody>
                                 </table>
-                            <!-- </div>  -->
                         </div>
                         <div class="modalBlank" style="height:15px"></div>                         
                         <div class="container-fluid">
@@ -283,17 +324,17 @@
                 </div>
             </div>
         </div>
+
+        
         <div class="container-fluid">
             <div class="row">
                 <div class="optionNav col-12 d-flex align-content-center">
-
-
                     <div class="col-5 d-flex align-content-center flex-row flex-wrap">
                         <div id="watchBasic" class="d-flex align-content-center flex-wrap" style="width:120px; margin-left:10px;">
                             <a href="#" id="basicFont"  class="optionBtn" style="padding-left: 6px;" onClick= "pageSet('basic')" >기본 이미지 보기</a>
                         </div>
                         <div id="watchMobile" class="d-flex align-content-center flex-wrap" style="width:120px; margin-left:10px;">
-                            <a href="#"  id="moblieFont" style="" class="optionBtn" onClick= "pageSet('mobile')">모바일 배너로 보기</a>
+                            <a href="#"  id="mobileFont" style="" class="optionBtn" onClick= "pageSet('mobile')">모바일 배너로 보기</a>
                         </div>
                     </div> 
                     <!-- font-color: rgba(50, 60, 81, 0.6); -->
@@ -308,7 +349,6 @@
                         </li>
                     </ul>    
                 </div>
-                <!-- 하단 옵션   background-color: #eef1f7;-->
             </div>
         </div>
 
@@ -316,13 +356,13 @@
                 <!--해당자료 참고하고 수정하기 https://getbootstrap.com/docs/4.1/components/badge/ -->
             <div class="row" style="padding-bottom:10px;">
                 <div class="detailOptionNav col-12 d-flex align-content-center">
-                    <ul class="nav col-5 nav-pills nav-fill d-flex align-content-center flex flex-wrap">
-                        <a class="detailOptionBtn badge badge-pill badge-light" style="margin-left:10px" href="#">판매량순</a>
-                        <a class="detailOptionBtn badge badge-pill badge-light" href="#">업체순</a>
-                        <a class="detailOptionBtn badge badge-pill badge-light" href="#" >브랜드순</a>
-                        <a class="detailOptionBtn badge badge-pill badge-light" href="#" >지금베스트순</a>
-                        <a class="detailOptionBtn badge badge-pill badge-light" href="#" >UV</a>
-                        <a class="detailOptionBtn badge badge-pill badge-light" href="#" >CR</a>
+                    <ul class="nav col-5 nav-pills nav-fill d-flex align-content-center flex flex-wrap" style="margin-left:10px">
+                        <a id="sortSale" class="detailOptionBtn badge badge-pill badge-light" href="#" onClick="sortCard('sortSale')">판매량순</a>
+                        <a id="sortComp" class="detailOptionBtn badge badge-pill badge-light" href="#" onClick="sortCard('sortComp')">업체순</a>
+                        <a id="sortBrand" class="detailOptionBtn badge badge-pill badge-light" href="#" onClick="sortCard('sortBrand')">브랜드순</a>
+                        <a id="sortNowBest" class="detailOptionBtn badge badge-pill badge-light" href="#" onClick="sortCard('sortNowBest')">지금베스트순</a>
+                        <a id="sortUv" class="detailOptionBtn badge badge-pill badge-light" href="#" onClick="sortCard('sortUv')">UV</a>
+                        <a id="sortCr" class="detailOptionBtn badge badge-pill badge-light" href="#"  onClick="sortCard('sortCr')">CR</a>
                     </ul>
     
                     <!--해당자료 참고하고 수정하기 https://getbootstrap.com/docs/4.1/components/dropdowns/ -->
@@ -355,94 +395,90 @@
             </div>
         </div>
         
-        <div id="cardContainer" class="container-fluid">
-            <div id="cardTable" class ="col-12 d-flex align-content-center">
-                <div class="row mr-0 ml-0 flex-grow-0 d-flex align-items-center flex-wrap" style="margin-bottom:28px">
-                     <!--카드 대크---------------------------------------->
-                    <div id="cardSet" class="card-deck mr-0 ml-0 flex-grow-1 d-flex align-items-center flex-wrap">
-                        <div class="card cardBackground container-fluid">
-                            <div class="row" style="padding-top:5px">
-                                <a class="col-4 d-flex align-self-center" href="#" style = "height: 96px; align-items: center;">
-                                    <img src="/images/cardImages/sample.png" class="cardImage">
-                                </a>
-                                <div class="col">
-                                    <div class="row" style="margin-top: 10px"> <div class="col cardProductCode"> 상품코드 : 99999999</div> </div>
-                                    <div class="row"> <div class="col cardCompanyName"> 올리비아비 / 주식회사 세정글로벌</div></div>
-                                    <div class="row"> <div class="col cardProductName"> [몬테밀라노] 몬테밀라노 </div></div>
-                                    <div class="row"> <div class="col cardProductSubName"> [OLIVIA.B] 레인 드롭 후드...</div></div>
-                                </div>    
-                            </div>
-                            
-                            <div class ="row"> <div class="col topDivider"></div></div>
-
-                            <div class="row">
-                                <div class="cardPriceMessage col-5">
-                                    판매가
-                                </div>
-                                <div class="cardPrice col d-flex align-items-center flex-row-reverse flex-wrap">
-                                    17,9000원
-                                </div>
-                            </div>
-                            <div class="topDivider"></div>
-
-                            <div class="container mt-2">
-                                <div class="row">
-                                    <div class="col-6 cardDetailInfoBox">
-                                        <div class ="subUpperMessage row">업체지급액 </div>
-                                        <div class ="subPriceAndRate row">40,000원 </div>
-                                    </div>
-                                    <div class="col-6 cardDetailInfoBox">
-                                        <div class ="subUpperMessage row">마진율 </div>
-                                        <div class ="subPriceAndRate row">15% </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 cardDetailInfoBox">
-                                        <div class ="subUpperMessage row">주문수량 </div>
-                                        <div class ="subPriceAndRate row">3,477개 </div>
-                                    </div>
-                                    <div class="col-6 cardDetailInfoBox">
-                                        <div class ="subUpperMessage row">총주문금액 </div>
-                                        <div class ="subPriceAndRate row">201,007,371원 </div>
-                                    </div>
-                                </div>  
-                                <div class="row">
-                                    <div class="col-6 cardDetailInfoBox">
-                                        <div class ="subUpperMessage row">순주문금액 </div>
-                                        <div class ="subPriceAndRate row">201,007,371원 </div>
-                                    </div>
-                                    <div class="col-6 cardDetailInfoBox">
-                                        <div class ="subUpperMessage row">예상취급액 </div>
-                                        <div class ="subPriceAndRate row">108,314,820원 </div>
-                                    </div>
-                                </div>  
-                                <div class="row">
-                                    <div class="col-6 cardDetailInfoBox">
-                                        <div class ="subUpperMessage row">누적UV </div>
-                                        <div class ="subPriceAndRate row">201,007,371 </div>
-                                    </div>        
-                                    <div class="col-6 cardDetailInfoBox">
-                                        <div class ="subUpperMessage row">누적CR </div>
-                                        <div class ="subPriceAndRate row">30.42% </div>
-                                    </div>        
-                                </div>
-                            </div>
-                            <div class ="row"> <div class="col topDivider"></div></div>
-                            <div class="row">
-                                <div class="warningMessage col-6">
-                                    <img src="/images/cardImages/warningIcon.png" class="warningImage">
-                                    일부 속성 품절                     
-                                </div>
-                                <div class="col-6 d-flex align-items-center flex-row-reverse flex-wrap">
-                                    <a href=# class="contactLabel">연락하기</a>
-                                </div>
-                            </div>
-                        </div>            
+        <div id="cardCollection" class="container-fluid d-flex flex-row flex-wrap">
+            <div class="card cardBackground">
+                <div class = "container">
+                    <div class="row" style="padding-top:5px">
+                        <a class="col-4 d-flex align-self-center" href="#" style = "height: 96px; align-items: center;">
+                            <img src="/images/cardImages/sample.png" class="cardImage">
+                        </a>
+                        <div class="col">
+                            <div class="row" style="margin-top: 10px"> <div class="col cardProductCode"> 상품코드 : 99999999</div> </div>
+                            <div class="row"> <div class="col cardCompanyName"> 올리비아비 / 주식회사 세정글로벌</div></div>
+                            <div class="row"> <div class="col cardProductName"> [몬테밀라노] 몬테밀라노 </div></div>
+                            <div class="row"> <div class="col cardProductSubName"> [OLIVIA.B] 레인 드롭 후드...</div></div>
+                        </div>    
                     </div>
-                </div>
+                
+                    <div class ="row"> <div class="col topDivider"></div></div>
+
+                    <div class="row">
+                        <div class="cardPriceMessage col-5">
+                            판매가
+                        </div>
+                        <div class="cardPrice col d-flex align-items-center flex-row-reverse flex-wrap">
+                            17,9000원
+                        </div>
+                    </div>
+                    <div class="topDivider"></div>
+
+                    <div class="container mt-2">
+                        <div class="row">
+                            <div class="col-6 cardDetailInfoBox">
+                                <div class ="subUpperMessage row">업체지급액 </div>
+                                <div class ="subPriceAndRate row">40,000원 </div>
+                            </div>
+                            <div class="col-6 cardDetailInfoBox">
+                                <div class ="subUpperMessage row">마진율 </div>
+                                <div class ="subPriceAndRate row">15% </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 cardDetailInfoBox">
+                                <div class ="subUpperMessage row">주문수량 </div>
+                                <div class ="subPriceAndRate row">3,477개 </div>
+                            </div>
+                            <div class="col-6 cardDetailInfoBox">
+                                <div class ="subUpperMessage row">총주문금액 </div>
+                                <div class ="subPriceAndRate row">201,007,371원 </div>
+                            </div>
+                        </div>  
+                        <div class="row">
+                            <div class="col-6 cardDetailInfoBox">
+                                <div class ="subUpperMessage row">순주문금액 </div>
+                                <div class ="subPriceAndRate row">201,007,371원 </div>
+                            </div>
+                            <div class="col-6 cardDetailInfoBox">
+                                <div class ="subUpperMessage row">예상취급액 </div>
+                                <div class ="subPriceAndRate row">108,314,820원 </div>
+                            </div>
+                        </div>  
+                        <div class="row">
+                            <div class="col-6 cardDetailInfoBox">
+                                <div class ="subUpperMessage row">누적UV </div>
+                                <div class ="subPriceAndRate row">201,007,371 </div>
+                            </div>        
+                            <div class="col-6 cardDetailInfoBox">
+                                <div class ="subUpperMessage row">누적CR </div>
+                                <div class ="subPriceAndRate row">30.42% </div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class ="row"> <div class="col topDivider"></div></div>
+                    <div class="row">
+                        <div class="warningMessage col-6">
+                            <img src="/images/cardImages/warningIcon.png" class="warningImage">
+                            일부 속성 품절                     
+                        </div>
+                        <div class="col-6 d-flex align-items-center flex-row-reverse flex-wrap">
+                            <a href=# class="contactLabel">연락하기</a>
+                        </div>
+                    </div>
+                </div>            
             </div>
         </div>
-       
+                        
+
 
         <!--SCRIPT-->
         <script src="/js/jquery.min.js"></script>
@@ -450,10 +486,10 @@
         <script src="/js/bootstrap.bundle.js"></script>
         <script src="/js/bootstrap.min.js"></script>
        
-    
         <script src="/javascripts/index.js"></script>
         <script src="/javascripts/modalControl.js"></script>
         <script src="/javascripts/dateRangePicker.js"></script>
+        <script src="/javascripts/dataSorting.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -461,14 +497,4 @@
     </body>
 </html>
 
-
-<!-- <nav class="navbar" id="topBar">
-                <span id="logoSpace">
-                    <img src = "/images/topBarImages/logo-space.png">
-                </span>
-                <span>
-                    
-                </span>
-                <span>
-            </nav> -->
  
