@@ -1,7 +1,6 @@
 let selected ="";
 
 let sortCard = (option) =>{
-
     let button = document.getElementById(option);
     button.className = 'detailOptionBtn badge badge-pill badge-light';
     button.style= `

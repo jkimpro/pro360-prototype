@@ -146,33 +146,31 @@ let makeCard = () =>{
 }
 
 let pageSet=(page)=>{
+    
     let set = document.getElementById('watchBasic');
     let setFont = document.getElementById('basicFont');
-
     let dset = document.getElementById('watchMobile');
     let dsetFont = document.getElementById('mobileFont'); 
 
     if(page==='mobile'){
-   
         set.style = 'width:120px; height:100%; margin-left:10px;';
         dset.style = 'width:120px; height:100%; margin-left:10px; border-bottom:2px solid #0062ff;';
         
-        setFont.style='padding-left: 6px;';
-        dsetFont.style='color: #0269e6';
+        setFont.style='padding-left: 6px;  text-decoration:none;';
+        dsetFont.style='color: #0269e6;  text-decoration:none;';
     }
     else{
         set.style = 'width:120px; height:100%; margin-left:10px; border-bottom:2px solid #0062ff;';
         dset.style = 'width:120px; height:100%; margin-left:10px;';
 
-        setFont.style='padding-left: 6px; color: #0269e6';
-        dsetFont.style= '';
+        setFont.style='padding-left: 6px; color: #0269e6;  text-decoration:none;';
+        dsetFont.style= 'text-decoration:none;';
     }
 }
 
 
 let makeCardV2 =() =>{
     let cardCol = document.getElementById('cardCollection');
-    
     if(isInit == false){
         cardCount=0;
     }
